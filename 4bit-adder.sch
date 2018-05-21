@@ -220,17 +220,28 @@ Text Label 2600 3000 2    60   ~ 0
 $Comp
 L DIP-4 SW?
 U 1 1 5B02E8BC
-P 1900 4200
-F 0 "SW?" H 1900 4300 70  0000 C CNN
-F 1 "DIP-4" H 1900 3500 70  0000 C CNN
-F 2 "" H 1900 4200 60  0000 C CNN
-F 3 "" H 1900 4200 60  0000 C CNN
-	1    1900 4200
+P 1900 4000
+F 0 "SW?" H 1900 4100 70  0000 C CNN
+F 1 "DIP-4" H 1900 3300 70  0000 C CNN
+F 2 "" H 1900 4000 60  0000 C CNN
+F 3 "" H 1900 4000 60  0000 C CNN
+	1    1900 4000
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R?
 U 1 1 5B02E90F
+P 1200 4000
+F 0 "R?" H 1200 4050 40  0000 C CNN
+F 1 "10k" H 1200 3950 40  0000 C CNN
+F 2 "" H 1200 4000 60  0000 C CNN
+F 3 "" H 1200 4000 60  0000 C CNN
+	1    1200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E9FB
 P 1200 4200
 F 0 "R?" H 1200 4250 40  0000 C CNN
 F 1 "10k" H 1200 4150 40  0000 C CNN
@@ -241,7 +252,7 @@ F 3 "" H 1200 4200 60  0000 C CNN
 $EndComp
 $Comp
 L R R?
-U 1 1 5B02E9FB
+U 1 1 5B02EA32
 P 1200 4400
 F 0 "R?" H 1200 4450 40  0000 C CNN
 F 1 "10k" H 1200 4350 40  0000 C CNN
@@ -252,7 +263,7 @@ F 3 "" H 1200 4400 60  0000 C CNN
 $EndComp
 $Comp
 L R R?
-U 1 1 5B02EA32
+U 1 1 5B02EA6C
 P 1200 4600
 F 0 "R?" H 1200 4650 40  0000 C CNN
 F 1 "10k" H 1200 4550 40  0000 C CNN
@@ -262,34 +273,23 @@ F 3 "" H 1200 4600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
-U 1 1 5B02EA6C
-P 1200 4800
-F 0 "R?" H 1200 4850 40  0000 C CNN
-F 1 "10k" H 1200 4750 40  0000 C CNN
-F 2 "" H 1200 4800 60  0000 C CNN
-F 3 "" H 1200 4800 60  0000 C CNN
-	1    1200 4800
-	1    0    0    -1  
-$EndComp
-$Comp
 L VSS #PWR?
 U 1 1 5B02EACD
-P 900 5000
-F 0 "#PWR?" H 900 4850 50  0001 C CNN
-F 1 "VSS" H 900 5150 50  0000 C CNN
-F 2 "" H 900 5000 50  0000 C CNN
-F 3 "" H 900 5000 50  0000 C CNN
-	1    900  5000
+P 900 4800
+F 0 "#PWR?" H 900 4650 50  0001 C CNN
+F 1 "VSS" H 900 4950 50  0000 C CNN
+F 2 "" H 900 4800 50  0000 C CNN
+F 3 "" H 900 4800 50  0000 C CNN
+	1    900  4800
 	1    0    0    1   
 $EndComp
-Text Label 2600 4200 2    60   ~ 0
+Text Label 2600 4000 2    60   ~ 0
 1B
-Text Label 2600 4400 2    60   ~ 0
+Text Label 2600 4200 2    60   ~ 0
 2B
-Text Label 2600 4600 2    60   ~ 0
+Text Label 2600 4400 2    60   ~ 0
 3B
-Text Label 2600 4800 2    60   ~ 0
+Text Label 2600 4600 2    60   ~ 0
 4B
 Text Label 3500 1500 0    60   ~ 0
 1A
@@ -465,6 +465,27 @@ F 3 "" H 6300 3400 60  0001 C CNN
 	4    6300 3400
 	1    0    0    -1  
 $EndComp
+Text Notes 5400 2200 0    60   ~ 0
+Carry1
+Text Label 7100 3400 2    60   ~ 0
+Sum2
+Text Notes 3500 1100 0    60   ~ 0
+The first stage is only a half-adder because\nthere is no incomming carry to take care of.
+Text Notes 3600 10200 0    70   Italic 0
+The schematic is being created as I make progress\nwith the physical board.
+$Comp
+L 4081 U?
+U 4 1 5B02FD03
+P 6400 4000
+F 0 "U?" H 6400 4050 50  0000 C CNN
+F 1 "4081" H 6400 3950 50  0000 C CNN
+F 2 "" H 6400 4000 60  0001 C CNN
+F 3 "" H 6400 4000 60  0001 C CNN
+	4    6400 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 4000 0    60   ~ 0
+Carry2
 Wire Wire Line
 	1500 1250 1500 1100
 Wire Wire Line
@@ -493,18 +514,18 @@ Wire Wire Line
 Wire Wire Line
 	2300 3000 2600 3000
 Wire Wire Line
-	900  4200 900  5000
+	900  4000 900  4800
+Connection ~ 900  4200
 Connection ~ 900  4400
 Connection ~ 900  4600
-Connection ~ 900  4800
+Wire Wire Line
+	2300 4000 2600 4000
 Wire Wire Line
 	2300 4200 2600 4200
 Wire Wire Line
 	2300 4400 2600 4400
 Wire Wire Line
 	2300 4600 2600 4600
-Wire Wire Line
-	2300 4800 2600 4800
 Wire Wire Line
 	1400 2400 1500 2400
 Wire Wire Line
@@ -514,13 +535,13 @@ Wire Wire Line
 Wire Wire Line
 	1500 3000 1400 3000
 Wire Wire Line
-	1400 4200 1500 4200
+	1400 4000 1500 4000
+Wire Wire Line
+	1500 4200 1400 4200
 Wire Wire Line
 	1500 4400 1400 4400
 Wire Wire Line
 	1500 4600 1400 4600
-Wire Wire Line
-	1500 4800 1400 4800
 Wire Wire Line
 	3500 1500 3900 1500
 Wire Wire Line
@@ -582,13 +603,13 @@ Wire Wire Line
 Wire Wire Line
 	1000 3000 900  3000
 Wire Wire Line
+	1000 4000 900  4000
+Wire Wire Line
 	1000 4200 900  4200
 Wire Wire Line
 	1000 4400 900  4400
 Wire Wire Line
 	1000 4600 900  4600
-Wire Wire Line
-	1000 4800 900  4800
 Wire Wire Line
 	3900 3000 3500 3000
 Wire Wire Line
@@ -604,23 +625,46 @@ Wire Wire Line
 	3800 3800 3800 3000
 Connection ~ 3800 3000
 Wire Wire Line
-	5100 3100 5700 3100
-Wire Wire Line
-	5700 3100 5700 3300
-Wire Wire Line
 	5200 2200 5400 2200
 Wire Wire Line
 	5400 2200 5400 3500
 Wire Wire Line
 	5400 3500 5700 3500
-Text Notes 5400 2200 0    60   ~ 0
-Carry1
 Wire Wire Line
 	6900 3400 7100 3400
-Text Label 7100 3400 2    60   ~ 0
-Sum2
-Text Notes 3500 1100 0    60   ~ 0
-The first stage is only a half-adder because\nthere is no incomming carry to take care of.
-Text Notes 3600 10200 0    70   Italic 0
-The schematic is being created as I make progress\nwith the physical board.
+Wire Wire Line
+	5200 3700 5200 4200
+Wire Wire Line
+	5700 3900 5800 3900
+Wire Wire Line
+	5700 3100 5700 3900
+Wire Wire Line
+	5700 3100 5100 3100
+Connection ~ 5700 3300
+Wire Wire Line
+	5800 4100 5600 4100
+Wire Wire Line
+	5600 4100 5600 3500
+Connection ~ 5600 3500
+Wire Wire Line
+	7000 4000 7000 4400
+Wire Wire Line
+	7000 4400 5200 4400
+$Comp
+L 4071 U?
+U 4 1 5B030B4E
+P 4600 4300
+F 0 "U?" H 4600 4350 50  0000 C CNN
+F 1 "4071" H 4600 4250 50  0000 C CNN
+F 2 "" H 4600 4300 60  0001 C CNN
+F 3 "" H 4600 4300 60  0001 C CNN
+	4    4600 4300
+	-1   0    0    1   
+$EndComp
+Text Notes 2700 3000 0    120  ~ 0
+1\n2\n4\n8
+Text Notes 2700 4600 0    120  ~ 0
+1\n2\n4\n8
+Text Notes 2700 3600 0    120  ~ 0
++
 $EndSCHEMATC
