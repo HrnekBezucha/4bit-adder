@@ -1,0 +1,672 @@
+EESchema Schematic File Version 2
+LIBS:custom-lib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:4bit-adder-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 8268 11693 portrait
+encoding utf-8
+Sheet 1 1
+Title "4bit TTL Adder"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X02 P?
+U 1 1 5B016CF8
+P 1300 1300
+F 0 "P?" H 1300 1450 50  0000 C CNN
+F 1 "CONN_01X02" V 1400 1300 50  0000 C CNN
+F 2 "" H 1300 1300 50  0000 C CNN
+F 3 "" H 1300 1300 50  0000 C CNN
+	1    1300 1300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5B016D3B
+P 1900 1300
+F 0 "C?" H 1900 1400 40  0000 L CNN
+F 1 "100nF" H 1906 1215 40  0000 L CNN
+F 2 "" H 1938 1150 30  0000 C CNN
+F 3 "" H 1900 1300 60  0000 C CNN
+	1    1900 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D?
+U 1 1 5B016D5C
+P 2300 1300
+F 0 "D?" H 2300 1400 50  0000 C CNN
+F 1 "5V1" H 2300 1200 40  0000 C CNN
+F 2 "" H 2300 1300 60  0000 C CNN
+F 3 "" H 2300 1300 60  0000 C CNN
+	1    2300 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VDD #PWR?
+U 1 1 5B016D81
+P 2100 1100
+F 0 "#PWR?" H 2100 950 50  0001 C CNN
+F 1 "VDD" H 2100 1250 50  0000 C CNN
+F 2 "" H 2100 1100 50  0000 C CNN
+F 3 "" H 2100 1100 50  0000 C CNN
+	1    2100 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR?
+U 1 1 5B016D9B
+P 2100 1500
+F 0 "#PWR?" H 2100 1350 50  0001 C CNN
+F 1 "VSS" H 2100 1650 50  0000 C CNN
+F 2 "" H 2100 1500 50  0000 C CNN
+F 3 "" H 2100 1500 50  0000 C CNN
+	1    2100 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B016DCA
+P 1700 1100
+F 0 "#FLG?" H 1700 1195 50  0001 C CNN
+F 1 "PWR_FLAG" H 1700 1280 50  0000 C CNN
+F 2 "" H 1700 1100 50  0000 C CNN
+F 3 "" H 1700 1100 50  0000 C CNN
+	1    1700 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 5B016DE5
+P 1700 1500
+F 0 "#FLG?" H 1700 1595 50  0001 C CNN
+F 1 "PWR_FLAG" H 1700 1680 50  0000 C CNN
+F 2 "" H 1700 1500 50  0000 C CNN
+F 3 "" H 1700 1500 50  0000 C CNN
+	1    1700 1500
+	1    0    0    1   
+$EndComp
+$Comp
+L 4070 U?
+U 1 1 5B02E4E3
+P 4400 1700
+F 0 "U?" H 4400 1750 50  0000 C CNN
+F 1 "4070" H 4400 1650 50  0000 C CNN
+F 2 "" H 4400 1700 60  0001 C CNN
+F 3 "" H 4400 1700 60  0001 C CNN
+	1    4400 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4081 U?
+U 1 1 5B02E566
+P 4500 2300
+F 0 "U?" H 4500 2350 50  0000 C CNN
+F 1 "4081" H 4500 2250 50  0000 C CNN
+F 2 "" H 4500 2300 60  0001 C CNN
+F 3 "" H 4500 2300 60  0001 C CNN
+	1    4500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L DIP-4 SW?
+U 1 1 5B02E5E4
+P 1900 2400
+F 0 "SW?" H 1900 2500 70  0000 C CNN
+F 1 "DIP-4" H 1900 1700 70  0000 C CNN
+F 2 "" H 1900 2400 60  0000 C CNN
+F 3 "" H 1900 2400 60  0000 C CNN
+	1    1900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E615
+P 1200 2400
+F 0 "R?" H 1200 2450 40  0000 C CNN
+F 1 "10k" H 1200 2350 40  0000 C CNN
+F 2 "" H 1200 2400 60  0000 C CNN
+F 3 "" H 1200 2400 60  0000 C CNN
+	1    1200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E657
+P 1200 2600
+F 0 "R?" H 1200 2650 40  0000 C CNN
+F 1 "10k" H 1200 2550 40  0000 C CNN
+F 2 "" H 1200 2600 60  0000 C CNN
+F 3 "" H 1200 2600 60  0000 C CNN
+	1    1200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E67F
+P 1200 2800
+F 0 "R?" H 1200 2850 40  0000 C CNN
+F 1 "10k" H 1200 2750 40  0000 C CNN
+F 2 "" H 1200 2800 60  0000 C CNN
+F 3 "" H 1200 2800 60  0000 C CNN
+	1    1200 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E6AA
+P 1200 3000
+F 0 "R?" H 1200 3050 40  0000 C CNN
+F 1 "10k" H 1200 2950 40  0000 C CNN
+F 2 "" H 1200 3000 60  0000 C CNN
+F 3 "" H 1200 3000 60  0000 C CNN
+	1    1200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR?
+U 1 1 5B02E71B
+P 900 3200
+F 0 "#PWR?" H 900 3050 50  0001 C CNN
+F 1 "VSS" H 900 3350 50  0000 C CNN
+F 2 "" H 900 3200 50  0000 C CNN
+F 3 "" H 900 3200 50  0000 C CNN
+	1    900  3200
+	1    0    0    1   
+$EndComp
+Text Label 2600 2400 2    60   ~ 0
+1A
+Text Label 2600 2600 2    60   ~ 0
+2A
+Text Label 2600 2800 2    60   ~ 0
+3A
+Text Label 2600 3000 2    60   ~ 0
+4A
+$Comp
+L DIP-4 SW?
+U 1 1 5B02E8BC
+P 1900 4000
+F 0 "SW?" H 1900 4100 70  0000 C CNN
+F 1 "DIP-4" H 1900 3300 70  0000 C CNN
+F 2 "" H 1900 4000 60  0000 C CNN
+F 3 "" H 1900 4000 60  0000 C CNN
+	1    1900 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E90F
+P 1200 4000
+F 0 "R?" H 1200 4050 40  0000 C CNN
+F 1 "10k" H 1200 3950 40  0000 C CNN
+F 2 "" H 1200 4000 60  0000 C CNN
+F 3 "" H 1200 4000 60  0000 C CNN
+	1    1200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02E9FB
+P 1200 4200
+F 0 "R?" H 1200 4250 40  0000 C CNN
+F 1 "10k" H 1200 4150 40  0000 C CNN
+F 2 "" H 1200 4200 60  0000 C CNN
+F 3 "" H 1200 4200 60  0000 C CNN
+	1    1200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02EA32
+P 1200 4400
+F 0 "R?" H 1200 4450 40  0000 C CNN
+F 1 "10k" H 1200 4350 40  0000 C CNN
+F 2 "" H 1200 4400 60  0000 C CNN
+F 3 "" H 1200 4400 60  0000 C CNN
+	1    1200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02EA6C
+P 1200 4600
+F 0 "R?" H 1200 4650 40  0000 C CNN
+F 1 "10k" H 1200 4550 40  0000 C CNN
+F 2 "" H 1200 4600 60  0000 C CNN
+F 3 "" H 1200 4600 60  0000 C CNN
+	1    1200 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR?
+U 1 1 5B02EACD
+P 900 4800
+F 0 "#PWR?" H 900 4650 50  0001 C CNN
+F 1 "VSS" H 900 4950 50  0000 C CNN
+F 2 "" H 900 4800 50  0000 C CNN
+F 3 "" H 900 4800 50  0000 C CNN
+	1    900  4800
+	1    0    0    1   
+$EndComp
+Text Label 2600 4000 2    60   ~ 0
+1B
+Text Label 2600 4200 2    60   ~ 0
+2B
+Text Label 2600 4400 2    60   ~ 0
+3B
+Text Label 2600 4600 2    60   ~ 0
+4B
+Text Label 3400 1600 0    60   ~ 0
+1A
+Text Label 3400 1800 0    60   ~ 0
+1B
+Text Label 7000 1700 2    60   ~ 0
+Sum1
+$Comp
+L LED D?
+U 1 1 5B02FBD3
+P 2200 5800
+F 0 "D?" H 2200 5900 50  0000 C CNN
+F 1 "LED" H 2200 5700 50  0000 C CNN
+F 2 "" H 2200 5800 60  0000 C CNN
+F 3 "" H 2200 5800 60  0000 C CNN
+	1    2200 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5B02FC26
+P 2200 6100
+F 0 "D?" H 2200 6200 50  0000 C CNN
+F 1 "LED" H 2200 6000 50  0000 C CNN
+F 2 "" H 2200 6100 60  0000 C CNN
+F 3 "" H 2200 6100 60  0000 C CNN
+	1    2200 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5B02FC6B
+P 2200 6400
+F 0 "D?" H 2200 6500 50  0000 C CNN
+F 1 "LED" H 2200 6300 50  0000 C CNN
+F 2 "" H 2200 6400 60  0000 C CNN
+F 3 "" H 2200 6400 60  0000 C CNN
+	1    2200 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5B02FCB3
+P 2200 6700
+F 0 "D?" H 2200 6800 50  0000 C CNN
+F 1 "LED" H 2200 6600 50  0000 C CNN
+F 2 "" H 2200 6700 60  0000 C CNN
+F 3 "" H 2200 6700 60  0000 C CNN
+	1    2200 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5B02FD02
+P 2200 7000
+F 0 "D?" H 2200 7100 50  0000 C CNN
+F 1 "LED" H 2200 6900 50  0000 C CNN
+F 2 "" H 2200 7000 60  0000 C CNN
+F 3 "" H 2200 7000 60  0000 C CNN
+	1    2200 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02FD8C
+P 1700 5800
+F 0 "R?" H 1700 5850 40  0000 C CNN
+F 1 "330" H 1700 5750 40  0000 C CNN
+F 2 "" H 1700 5800 60  0000 C CNN
+F 3 "" H 1700 5800 60  0000 C CNN
+	1    1700 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02FE1E
+P 1700 6100
+F 0 "R?" H 1700 6150 40  0000 C CNN
+F 1 "330" H 1700 6050 40  0000 C CNN
+F 2 "" H 1700 6100 60  0000 C CNN
+F 3 "" H 1700 6100 60  0000 C CNN
+	1    1700 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02FE76
+P 1700 6400
+F 0 "R?" H 1700 6450 40  0000 C CNN
+F 1 "330" H 1700 6350 40  0000 C CNN
+F 2 "" H 1700 6400 60  0000 C CNN
+F 3 "" H 1700 6400 60  0000 C CNN
+	1    1700 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02FECD
+P 1700 6700
+F 0 "R?" H 1700 6750 40  0000 C CNN
+F 1 "330" H 1700 6650 40  0000 C CNN
+F 2 "" H 1700 6700 60  0000 C CNN
+F 3 "" H 1700 6700 60  0000 C CNN
+	1    1700 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B02FF2B
+P 1700 7000
+F 0 "R?" H 1700 7050 40  0000 C CNN
+F 1 "330" H 1700 6950 40  0000 C CNN
+F 2 "" H 1700 7000 60  0000 C CNN
+F 3 "" H 1700 7000 60  0000 C CNN
+	1    1700 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L VSS #PWR?
+U 1 1 5B0302E4
+P 2500 7200
+F 0 "#PWR?" H 2500 7050 50  0001 C CNN
+F 1 "VSS" H 2500 7350 50  0000 C CNN
+F 2 "" H 2500 7200 50  0000 C CNN
+F 3 "" H 2500 7200 50  0000 C CNN
+	1    2500 7200
+	1    0    0    1   
+$EndComp
+Text Label 1200 5800 0    60   ~ 0
+Sum1
+Text Label 1200 6100 0    60   ~ 0
+Sum2
+Text Label 1200 6400 0    60   ~ 0
+Sum3
+Text Label 1200 6700 0    60   ~ 0
+Sum4
+Text Label 1200 7000 0    60   ~ 0
+O'flow
+$Comp
+L 4070 U?
+U 2 1 5B0318C9
+P 4400 3100
+F 0 "U?" H 4400 3150 50  0000 C CNN
+F 1 "4070" H 4400 3050 50  0000 C CNN
+F 2 "" H 4400 3100 60  0001 C CNN
+F 3 "" H 4400 3100 60  0001 C CNN
+	2    4400 3100
+	1    0    0    -1  
+$EndComp
+Text Label 3400 3000 0    60   ~ 0
+2A
+Text Label 3400 3200 0    60   ~ 0
+2B
+$Comp
+L 4081 U?
+U 2 1 5B031AF4
+P 4500 3700
+F 0 "U?" H 4500 3750 50  0000 C CNN
+F 1 "4081" H 4500 3650 50  0000 C CNN
+F 2 "" H 4500 3700 60  0001 C CNN
+F 3 "" H 4500 3700 60  0001 C CNN
+	2    4500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4070 U?
+U 4 1 5B031C31
+P 6200 3400
+F 0 "U?" H 6200 3450 50  0000 C CNN
+F 1 "4070" H 6200 3350 50  0000 C CNN
+F 2 "" H 6200 3400 60  0001 C CNN
+F 3 "" H 6200 3400 60  0001 C CNN
+	4    6200 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 5300 2300 0    60   ~ 0
+Carry1
+Text Label 7000 3400 2    60   ~ 0
+Sum2
+Text Notes 3500 1200 0    60   ~ 0
+The first stage is only a half-adder because\nthere is no incomming carry to take care of.
+Text Notes 3600 10200 0    70   Italic 0
+The schematic is being created as I make progress\nwith the physical board.
+$Comp
+L 4081 U?
+U 4 1 5B02FD03
+P 6300 4000
+F 0 "U?" H 6300 4050 50  0000 C CNN
+F 1 "4081" H 6300 3950 50  0000 C CNN
+F 2 "" H 6300 4000 60  0001 C CNN
+F 3 "" H 6300 4000 60  0001 C CNN
+	4    6300 4000
+	1    0    0    -1  
+$EndComp
+Text Notes 6900 4000 0    60   ~ 0
+Carry2
+Wire Wire Line
+	1500 1250 1500 1100
+Wire Wire Line
+	1500 1100 2300 1100
+Wire Wire Line
+	1500 1350 1500 1500
+Wire Wire Line
+	1500 1500 2300 1500
+Connection ~ 1700 1100
+Connection ~ 1900 1100
+Connection ~ 2100 1100
+Connection ~ 2100 1500
+Connection ~ 1900 1500
+Connection ~ 1700 1500
+Wire Wire Line
+	900  2400 900  3200
+Connection ~ 900  2600
+Connection ~ 900  2800
+Connection ~ 900  3000
+Wire Wire Line
+	2300 2400 2600 2400
+Wire Wire Line
+	2300 2600 2600 2600
+Wire Wire Line
+	2300 2800 2600 2800
+Wire Wire Line
+	2300 3000 2600 3000
+Wire Wire Line
+	900  4000 900  4800
+Connection ~ 900  4200
+Connection ~ 900  4400
+Connection ~ 900  4600
+Wire Wire Line
+	2300 4000 2600 4000
+Wire Wire Line
+	2300 4200 2600 4200
+Wire Wire Line
+	2300 4400 2600 4400
+Wire Wire Line
+	2300 4600 2600 4600
+Wire Wire Line
+	1400 2400 1500 2400
+Wire Wire Line
+	1500 2600 1400 2600
+Wire Wire Line
+	1500 2800 1400 2800
+Wire Wire Line
+	1500 3000 1400 3000
+Wire Wire Line
+	1400 4000 1500 4000
+Wire Wire Line
+	1500 4200 1400 4200
+Wire Wire Line
+	1500 4400 1400 4400
+Wire Wire Line
+	1500 4600 1400 4600
+Wire Wire Line
+	3400 1600 3800 1600
+Wire Wire Line
+	3400 1800 3800 1800
+Wire Wire Line
+	3800 1800 3800 2200
+Wire Wire Line
+	3700 1600 3700 2400
+Wire Wire Line
+	3700 2400 3900 2400
+Connection ~ 3700 1600
+Connection ~ 3800 1800
+Wire Wire Line
+	3800 2200 3900 2200
+Wire Wire Line
+	5000 1700 7000 1700
+Wire Wire Line
+	2000 5800 1900 5800
+Wire Wire Line
+	2000 6100 1900 6100
+Wire Wire Line
+	2000 6400 1900 6400
+Wire Wire Line
+	2000 6700 1900 6700
+Wire Wire Line
+	2000 7000 1900 7000
+Wire Wire Line
+	2400 5800 2500 5800
+Wire Wire Line
+	2500 5800 2500 7200
+Wire Wire Line
+	2400 7000 2500 7000
+Connection ~ 2500 7000
+Wire Wire Line
+	2400 6700 2500 6700
+Connection ~ 2500 6700
+Wire Wire Line
+	2400 6400 2500 6400
+Connection ~ 2500 6400
+Wire Wire Line
+	2400 6100 2500 6100
+Connection ~ 2500 6100
+Wire Wire Line
+	1500 5800 1200 5800
+Wire Wire Line
+	1500 6100 1200 6100
+Wire Wire Line
+	1500 6400 1200 6400
+Wire Wire Line
+	1500 6700 1200 6700
+Wire Wire Line
+	1500 7000 1200 7000
+Wire Wire Line
+	1000 2400 900  2400
+Wire Wire Line
+	900  2600 1000 2600
+Wire Wire Line
+	1000 2800 900  2800
+Wire Wire Line
+	1000 3000 900  3000
+Wire Wire Line
+	1000 4000 900  4000
+Wire Wire Line
+	1000 4200 900  4200
+Wire Wire Line
+	1000 4400 900  4400
+Wire Wire Line
+	1000 4600 900  4600
+Wire Wire Line
+	3800 3000 3400 3000
+Wire Wire Line
+	3800 3200 3400 3200
+Connection ~ 3800 3200
+Wire Wire Line
+	3800 3200 3800 3600
+Wire Wire Line
+	3800 3600 3900 3600
+Wire Wire Line
+	3900 3800 3700 3800
+Wire Wire Line
+	3700 3800 3700 3000
+Connection ~ 3700 3000
+Wire Wire Line
+	5100 2300 5300 2300
+Wire Wire Line
+	5300 3500 5600 3500
+Wire Wire Line
+	6800 3400 7000 3400
+Wire Wire Line
+	5100 3700 5100 4200
+Wire Wire Line
+	5600 3900 5700 3900
+Wire Wire Line
+	5600 3100 5600 3900
+Wire Wire Line
+	5600 3100 5000 3100
+Connection ~ 5600 3300
+Wire Wire Line
+	5700 4100 5500 4100
+Wire Wire Line
+	5500 4100 5500 3500
+Connection ~ 5500 3500
+Wire Wire Line
+	6900 4000 6900 4400
+Wire Wire Line
+	6900 4400 5100 4400
+$Comp
+L 4071 U?
+U 4 1 5B030B4E
+P 4500 4300
+F 0 "U?" H 4500 4350 50  0000 C CNN
+F 1 "4071" H 4500 4250 50  0000 C CNN
+F 2 "" H 4500 4300 60  0001 C CNN
+F 3 "" H 4500 4300 60  0001 C CNN
+	4    4500 4300
+	-1   0    0    1   
+$EndComp
+Text Notes 2700 3000 0    120  ~ 0
+1\n2\n4\n8
+Text Notes 2700 4600 0    120  ~ 0
+1\n2\n4\n8
+Text Notes 2700 3600 0    120  ~ 0
++
+Wire Wire Line
+	5300 2300 5300 3500
+Text Notes 2700 7000 0    95   ~ 0
+1\n\n2\n\n4\n\n8\n\nOverflow
+$EndSCHEMATC
